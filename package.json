@@ -1,0 +1,19 @@
+{
+  "name": "lista-de-tareas-npm",
+  "version": "1.0.0",
+  "description": "Lista de tareas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Luis Hernandez",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "inquirer": "^7.3.3",
+    "node": "^17.3.0",
+    "nodemon": "^2.0.20",
+    "uuid": "^8.3.2"
+  }
+}
