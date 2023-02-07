@@ -5,12 +5,13 @@ const json = require("./db/data.json");
 const editTarea = require("./list-edit-router");
 const postTarea = require("./list-post-router");
 const Tasks = require("./list-view-router");
-
+const {methods, validateUrl} = require("./middlewares/methods")
 app.use(express.json());
+app.use(methods); 
 app.use("/tareas", Tasks);
-app.use("/", postTarea);
-app.use("/", editTarea);
-
+app.use("/agrega", postTarea);
+app.use("/edit", editTarea);
+app.use(validateUrl);
 app.get("/", function (req, res) {
   res.json(json);
   res.end();
