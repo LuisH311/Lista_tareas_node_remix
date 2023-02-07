@@ -2,8 +2,8 @@ const express = require("express");
 const postTarea = express.Router();
 const datos = require("./db/data.json");
 const fs = require("fs");
-
-postTarea.post("/", (req, res) => {
+const { bodyValidation, validatePost } = require("./middlewares/methods");
+postTarea.post("/", bodyValidation, validatePost, function (req, res) {
   const body = req.body;
   datos.push(body);
   fs.writeFileSync("./db/data.json", JSON.stringify(datos), (error) => {
@@ -15,4 +15,4 @@ postTarea.post("/", (req, res) => {
   res.end();
 });
 
-module.exports = postTarea
+module.exports = postTarea;
