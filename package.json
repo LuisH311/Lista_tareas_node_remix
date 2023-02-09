@@ -12,8 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "colors": "^1.4.0",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "inquirer": "^7.3.3",
+    "jsonwebtoken": "^9.0.0",
     "node": "^17.3.0",
     "node.js": "^0.0.1-security",
     "nodemon": "^2.0.20",
