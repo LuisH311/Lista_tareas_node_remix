@@ -11,7 +11,7 @@ const validationEstado = (req, res, next) => {
     res.status(400).send("bad request");
   }
 };
-Tasks.get("/&:completas", validationEstado, (req, res) => {
+Tasks.get("/:completas", validationEstado, (req, res) => {
   const completas = req.params.completas;
   if (completas === "completas") {
     const filter = datos.filter((item) => item.estado === true);
@@ -24,7 +24,6 @@ Tasks.get("/&:completas", validationEstado, (req, res) => {
   res.end();
   }
 });
-
 
 
 module.exports = Tasks;

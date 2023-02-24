@@ -17,6 +17,13 @@ app.get("/", function (req, res) {
   res.json(json);
   res.end();
 });
+app.get("/:id", (req, res) => {
+  const id = req.params.id;
+    const filter = json.filter((item) => item.id === id);
+    res.json(filter);
+    res.end();
+});
+
 
 const users = [
   { email: "example@example.com", name: "example", rol: "admin" },
